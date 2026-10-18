@@ -1,0 +1,24 @@
+﻿Variable,Descripción,Tipo,Unidad / Categorías
+Duration_Calendar,Diferencia en días entre End_Date y Start_Date.,Cuantitativa discreta,Días
+Flag_Duration_Discrepancy,Bandera de auditoría: Duration_Discrepancy. No se usa como predictor.,Indicador binario,0 = no señalado; 1 = señalado
+Flag_Zero_Funding,Bandera de auditoría: Zero_Funding. No se usa como predictor.,Indicador binario,0 = no señalado; 1 = señalado
+Flag_No_EU_Backers,Bandera de auditoría: No_EU_Backers. No se usa como predictor.,Indicador binario,0 = no señalado; 1 = señalado
+Creator_Country_Derived,País de origen recuperado de las 27 dummies originales.,Cualitativa nominal,25 países observados
+Same_Ctry_Share_Clean,Versión recalculada de la proporción. Queda vacía si EU_Backers_Tot es cero.,Cuantitativa continua,Proporción de 0 a 1 o NA
+Adjacent_Ctry_Share_Clean,Versión recalculada de la proporción. Queda vacía si EU_Backers_Tot es cero.,Cuantitativa continua,Proporción de 0 a 1 o NA
+Ln1p_Funding,Logaritmo natural de uno más Funding. Conserva observaciones con cero.,Cuantitativa continua,Escala ln(1+x)
+Ln1p_Target,Logaritmo natural de uno más Target. Conserva observaciones con cero.,Cuantitativa continua,Escala ln(1+x)
+Ln1p_Prev_Success,Logaritmo natural de uno más Prev_Success. Conserva observaciones con cero.,Cuantitativa continua,Escala ln(1+x)
+Ln1p_Backed,Logaritmo natural de uno más Backed. Conserva observaciones con cero.,Cuantitativa continua,Escala ln(1+x)
+Flag_IQR_Funding,Bandera de auditoría: IQR_Funding. No se usa como predictor.,Indicador binario,0 = no señalado; 1 = señalado
+Flag_IQR_Target,Bandera de auditoría: IQR_Target. No se usa como predictor.,Indicador binario,0 = no señalado; 1 = señalado
+Flag_IQR_Duration_Calendar,Bandera de auditoría: IQR_Duration_Calendar. No se usa como predictor.,Indicador binario,0 = no señalado; 1 = señalado
+Flag_IQR_Description,Bandera de auditoría: IQR_Description. No se usa como predictor.,Indicador binario,0 = no señalado; 1 = señalado
+Flag_IQR_Rewards,Bandera de auditoría: IQR_Rewards. No se usa como predictor.,Indicador binario,0 = no señalado; 1 = señalado
+Flag_IQR_Prev_Success,Bandera de auditoría: IQR_Prev_Success. No se usa como predictor.,Indicador binario,0 = no señalado; 1 = señalado
+Flag_IQR_Backed,Bandera de auditoría: IQR_Backed. No se usa como predictor.,Indicador binario,0 = no señalado; 1 = señalado
+Flag_IQR_Links,Bandera de auditoría: IQR_Links. No se usa como predictor.,Indicador binario,0 = no señalado; 1 = señalado
+Category_Creative_Arts,Dummy de la supercategoría indicada en el nombre. Referencia omitida: Media & Entertainment.,Cualitativa nominal binaria,0 = no; 1 = sí
+Category_Design,Dummy de la supercategoría indicada en el nombre. Referencia omitida: Media & Entertainment.,Cualitativa nominal binaria,0 = no; 1 = sí
+Category_Literature_Journalism,Dummy de la supercategoría indicada en el nombre. Referencia omitida: Media & Entertainment.,Cualitativa nominal binaria,0 = no; 1 = sí
+Category_Food,Dummy de la supercategoría indicada en el nombre. Referencia omitida: Media & Entertainment.,Cualitativa nominal binaria,0 = no; 1 = sí

@@ -1,0 +1,201 @@
+﻿Variable,Descripción,Tipo,Unidad / Categorías
+ID,Identificador de la campaña dentro de la base.,Identificador,Código sin unidad
+Start_Date,Inicio del periodo de financiación.,Temporal,Fecha AAAA-MM-DD
+End_Date,Final del periodo de financiación.,Temporal,Fecha AAAA-MM-DD
+Duration,Duración reportada en el archivo. La definición del autor es fin menos inicio; se conserva por trazabilidad.,Cuantitativa discreta,Días
+Category,Supercategoría de la campaña.,Cualitativa nominal,Media & Entertainment; Creative Arts; Design; Literature & Journalism; Food
+Category_Kickstarter,Categoría detallada asignada en Kickstarter.,Cualitativa nominal,art; comics; crafts; dance; design; fashion; film & video; food; games; journalism; music; photography; publishing; technology; theater
+Success,Resultado de financiación; respuesta de la regresión logística.,Cualitativa nominal binaria,0 = no exitoso; 1 = exitoso
+Funding,"Recaudación total reportada, convertida por la fuente al tipo de cambio de la fecha de cierre. Respuesta monetaria de origen para el modelo lineal.",Cuantitativa continua,USD
+Funding_IHS,"Seno hiperbólico inverso de Funding, verificado numéricamente. No equivale al logaritmo natural.",Cuantitativa continua,Escala IHS
+Target,Meta de financiación convertida por la fuente al tipo de cambio de la fecha de cierre.,Cuantitativa continua,USD
+Target_IHS,"Seno hiperbólico inverso de Target, verificado numéricamente.",Cuantitativa continua,Escala IHS
+Staff_Pick,Indica que recibió el distintivo Project We Love. No se acredita su fecha de asignación.,Cualitativa nominal binaria,0 = no; 1 = sí
+Backers,Patrocinadores de la campaña al cierre.,Cuantitativa discreta,Personas
+Video_Header,Indica si la cabecera de la página contiene un video.,Cualitativa nominal binaria,0 = no; 1 = sí
+Videos_Bool,Indica si el texto de campaña contiene al menos un video.,Cualitativa nominal binaria,0 = no; 1 = sí
+Images_Bool,Indica si el texto de campaña contiene al menos una imagen.,Cualitativa nominal binaria,0 = no; 1 = sí
+Description,Recuento de palabras del texto introductorio según el diccionario de la fuente; no mide la descripción completa.,Cuantitativa discreta,Palabras
+Rewards,Número de niveles de recompensa.,Cuantitativa discreta,Niveles
+Prev_Success,Número de campañas exitosas previas del creador.,Cuantitativa discreta,Campañas
+Backed,Número de proyectos apoyados por el creador.,Cuantitativa discreta,Proyectos
+Updates,Actualizaciones publicadas por el creador hasta el cierre.,Cuantitativa discreta,Actualizaciones
+Links,Número de sitios web enlazados por el creador.,Cuantitativa discreta,Enlaces
+Albania,Patrocinadores residentes en Albania que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Andorra,Patrocinadores residentes en Andorra que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Angola,Patrocinadores residentes en Angola que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Argentina,Patrocinadores residentes en Argentina que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Armenia,Patrocinadores residentes en Armenia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Aruba,Patrocinadores residentes en Aruba que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Australia,Patrocinadores residentes en Australia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Austria,Patrocinadores residentes en Austria que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Azerbaijan,Patrocinadores residentes en Azerbaijan que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Bahrain,Patrocinadores residentes en Bahrain que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Bangladesh,Patrocinadores residentes en Bangladesh que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Barbados,Patrocinadores residentes en Barbados que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Belarus,Patrocinadores residentes en Belarus que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Belgium,Patrocinadores residentes en Belgium que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Benin,Patrocinadores residentes en Benin que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Bermuda,Patrocinadores residentes en Bermuda que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Bolivia,Patrocinadores residentes en Bolivia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Bosnia and Herz.,Patrocinadores residentes en Bosnia and Herz. que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Brazil,Patrocinadores residentes en Brazil que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Brunei,Patrocinadores residentes en Brunei que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Bulgaria,Patrocinadores residentes en Bulgaria que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Burkina Faso,Patrocinadores residentes en Burkina Faso que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Burundi,Patrocinadores residentes en Burundi que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Cambodia,Patrocinadores residentes en Cambodia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Cameroon,Patrocinadores residentes en Cameroon que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Canada,Patrocinadores residentes en Canada que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Cayman Is.,Patrocinadores residentes en Cayman Is. que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Chile,Patrocinadores residentes en Chile que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+China,Patrocinadores residentes en China que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Colombia,Patrocinadores residentes en Colombia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Costa Rica,Patrocinadores residentes en Costa Rica que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Croatia,Patrocinadores residentes en Croatia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Cyprus,Patrocinadores residentes en Cyprus que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Czechia,Patrocinadores residentes en Czechia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Denmark,Patrocinadores residentes en Denmark que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Dominican Rep.,Patrocinadores residentes en Dominican Rep. que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Ecuador,Patrocinadores residentes en Ecuador que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Egypt,Patrocinadores residentes en Egypt que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+El Salvador,Patrocinadores residentes en El Salvador que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Estonia,Patrocinadores residentes en Estonia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Faeroe Is.,Patrocinadores residentes en Faeroe Is. que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Finland,Patrocinadores residentes en Finland que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+France,Patrocinadores residentes en France que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+French Guiana,Patrocinadores residentes en French Guiana que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Fr. Polynesia,Patrocinadores residentes en Fr. Polynesia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Georgia,Patrocinadores residentes en Georgia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Germany,Patrocinadores residentes en Germany que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Ghana,Patrocinadores residentes en Ghana que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Gibraltar,Patrocinadores residentes en Gibraltar que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Greece,Patrocinadores residentes en Greece que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Greenland,Patrocinadores residentes en Greenland que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Guadeloupe,Patrocinadores residentes en Guadeloupe que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Guam,Patrocinadores residentes en Guam que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Guatemala,Patrocinadores residentes en Guatemala que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Vatican,Patrocinadores residentes en Vatican que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Hong Kong,Patrocinadores residentes en Hong Kong que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Hungary,Patrocinadores residentes en Hungary que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Iceland,Patrocinadores residentes en Iceland que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+India,Patrocinadores residentes en India que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Indonesia,Patrocinadores residentes en Indonesia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Iraq,Patrocinadores residentes en Iraq que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Ireland,Patrocinadores residentes en Ireland que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Israel,Patrocinadores residentes en Israel que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Italy,Patrocinadores residentes en Italy que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Côte d'Ivoire,Patrocinadores residentes en Côte d'Ivoire que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Japan,Patrocinadores residentes en Japan que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Jordan,Patrocinadores residentes en Jordan que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Kazakhstan,Patrocinadores residentes en Kazakhstan que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Kenya,Patrocinadores residentes en Kenya que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Kuwait,Patrocinadores residentes en Kuwait que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Kyrgyzstan,Patrocinadores residentes en Kyrgyzstan que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Laos,Patrocinadores residentes en Laos que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Latvia,Patrocinadores residentes en Latvia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Lebanon,Patrocinadores residentes en Lebanon que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Liechtenstein,Patrocinadores residentes en Liechtenstein que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Lithuania,Patrocinadores residentes en Lithuania que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Luxembourg,Patrocinadores residentes en Luxembourg que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Macao,Patrocinadores residentes en Macao que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+North Macedonia,Patrocinadores residentes en North Macedonia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Madagascar,Patrocinadores residentes en Madagascar que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Malawi,Patrocinadores residentes en Malawi que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Malaysia,Patrocinadores residentes en Malaysia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Maldives,Patrocinadores residentes en Maldives que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Mali,Patrocinadores residentes en Mali que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Malta,Patrocinadores residentes en Malta que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Martinique,Patrocinadores residentes en Martinique que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Mexico,Patrocinadores residentes en Mexico que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Moldova,Patrocinadores residentes en Moldova que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Monaco,Patrocinadores residentes en Monaco que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Montenegro,Patrocinadores residentes en Montenegro que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Morocco,Patrocinadores residentes en Morocco que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Mozambique,Patrocinadores residentes en Mozambique que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Namibia,Patrocinadores residentes en Namibia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Netherlands,Patrocinadores residentes en Netherlands que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+New Caledonia,Patrocinadores residentes en New Caledonia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+New Zealand,Patrocinadores residentes en New Zealand que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Nigeria,Patrocinadores residentes en Nigeria que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+N. Mariana Is.,Patrocinadores residentes en N. Mariana Is. que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Norway,Patrocinadores residentes en Norway que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Oman,Patrocinadores residentes en Oman que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Pakistan,Patrocinadores residentes en Pakistan que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Panama,Patrocinadores residentes en Panama que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Peru,Patrocinadores residentes en Peru que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Philippines,Patrocinadores residentes en Philippines que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Poland,Patrocinadores residentes en Poland que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Portugal,Patrocinadores residentes en Portugal que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Puerto Rico,Patrocinadores residentes en Puerto Rico que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Qatar,Patrocinadores residentes en Qatar que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Romania,Patrocinadores residentes en Romania que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Russia,Patrocinadores residentes en Russia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Réunion,Patrocinadores residentes en Réunion que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+San Marino,Patrocinadores residentes en San Marino que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Saudi Arabia,Patrocinadores residentes en Saudi Arabia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Senegal,Patrocinadores residentes en Senegal que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Serbia,Patrocinadores residentes en Serbia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Singapore,Patrocinadores residentes en Singapore que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Slovakia,Patrocinadores residentes en Slovakia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Slovenia,Patrocinadores residentes en Slovenia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+South Africa,Patrocinadores residentes en South Africa que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+South Korea,Patrocinadores residentes en South Korea que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Spain,Patrocinadores residentes en Spain que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Sri Lanka,Patrocinadores residentes en Sri Lanka que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Suriname,Patrocinadores residentes en Suriname que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Sweden,Patrocinadores residentes en Sweden que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Switzerland,Patrocinadores residentes en Switzerland que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Taiwan,Patrocinadores residentes en Taiwan que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Tanzania,Patrocinadores residentes en Tanzania que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Thailand,Patrocinadores residentes en Thailand que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Bahamas,Patrocinadores residentes en Bahamas que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Tunisia,Patrocinadores residentes en Tunisia que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Turkey,Patrocinadores residentes en Turkey que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Ukraine,Patrocinadores residentes en Ukraine que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+United Arab Emirates,Patrocinadores residentes en United Arab Emirates que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+United Kingdom,Patrocinadores residentes en United Kingdom que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+United States of America,Patrocinadores residentes en United States of America que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Uruguay,Patrocinadores residentes en Uruguay que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Venezuela,Patrocinadores residentes en Venezuela que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+Vietnam,Patrocinadores residentes en Vietnam que apoyaron la campaña al cierre.,Cuantitativa discreta,Personas
+EU_Backers_Tot,Patrocinadores residentes en la UE que apoyaron la campaña.,Cuantitativa discreta,Personas
+EU_Backers_Share,Patrocinadores de la UE divididos entre el total de patrocinadores.,Cuantitativa continua,Proporción de 0 a 1
+Same_Ctry_Tot,Patrocinadores del mismo país de origen de la campaña.,Cuantitativa discreta,Personas
+Same_Ctry_Share,Patrocinadores del mismo país divididos entre EU_Backers_Tot. El original codifica 0/0 como cero en 32 casos.,Cuantitativa continua,Proporción de 0 a 1
+Austria_Bool,Indicador de origen de la campaña en Austria.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Belgium_Bool,Indicador de origen de la campaña en Belgium.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Bulgaria_Bool,Indicador de origen de la campaña en Bulgaria.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Croatia_Bool,Indicador de origen de la campaña en Croatia.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Cyprus_Bool,Indicador de origen de la campaña en Cyprus.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Czechia_Bool,Indicador de origen de la campaña en Czechia.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Denmark_Bool,Indicador de origen de la campaña en Denmark.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Estonia_Bool,Indicador de origen de la campaña en Estonia.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Finland_Bool,Indicador de origen de la campaña en Finland.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+France_Bool,Indicador de origen de la campaña en France.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Germany_Bool,Indicador de origen de la campaña en Germany.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Greece_Bool,Indicador de origen de la campaña en Greece.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Hungary_Bool,Indicador de origen de la campaña en Hungary.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Ireland_Bool,Indicador de origen de la campaña en Ireland.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Italy_Bool,Indicador de origen de la campaña en Italy.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Latvia_Bool,Indicador de origen de la campaña en Latvia.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Lithuania_Bool,Indicador de origen de la campaña en Lithuania.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Luxembourg_Bool,Indicador de origen de la campaña en Luxembourg.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Malta_Bool,Indicador de origen de la campaña en Malta.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Netherlands_Bool,Indicador de origen de la campaña en Netherlands.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Poland_Bool,Indicador de origen de la campaña en Poland.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Portugal_Bool,Indicador de origen de la campaña en Portugal.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Romania_Bool,Indicador de origen de la campaña en Romania.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Slovakia_Bool,Indicador de origen de la campaña en Slovakia.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Slovenia_Bool,Indicador de origen de la campaña en Slovenia.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Spain_Bool,Indicador de origen de la campaña en Spain.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Sweden_Bool,Indicador de origen de la campaña en Sweden.,Cualitativa nominal binaria,0 = otro país; 1 = este país
+Creator_Location,Localización textual del creador.,Cualitativa nominal,Ciudad y país
+Creator_Coord,Coordenadas de origen expresadas como POINT (longitud latitud).,Espacial,Grados; longitud y latitud
+Avg_Dist_EU,"Distancia media de los patrocinadores de la UE al origen de la campaña. Con cero patrocinadores UE, el valor no tiene interpretación de promedio.",Cuantitativa continua,Kilómetros
+Country_Pop,"Población del país de origen en 2023, atribuida a Eurostat por la fuente.",Cuantitativa discreta,Habitantes
+lnCountry_Pop,"Logaritmo natural de Country_Pop, verificado numéricamente.",Cuantitativa continua,Escala logarítmica
+Adjacent_Ctry_Tot,Patrocinadores de países adyacentes al país de origen de la campaña.,Cuantitativa discreta,Personas
+Adjacent_Ctry_Share,Adjacent_Ctry_Tot dividido entre EU_Backers_Tot. El original codifica 0/0 como cero en 32 casos.,Cuantitativa continua,Proporción de 0 a 1
+Adjacent_Ctry_Backers_Sum,"Agregado de patrocinadores basados en países adyacentes, según la fuente. Su universo y periodo de agregación no se detallan.",Cuantitativa discreta,Personas; universo por confirmar
+Adjacent_Ctry_Count,Número de países adyacentes al país de origen según la construcción de la fuente.,Cuantitativa discreta,Países

@@ -1,0 +1,99 @@
+{
+  "filas_originales": 2272,
+  "columnas_originales": 200,
+  "faltantes_originales": 0,
+  "duplicados_completos": 0,
+  "ids_duplicados": 0,
+  "no_finitos_originales": 0,
+  "columnas_constantes": [
+    "Barbados",
+    "N. Mariana Is.",
+    "Pakistan",
+    "Czechia_Bool",
+    "Malta_Bool"
+  ],
+  "columnas_patrocinadores_por_pais": 138,
+  "columnas_dummy_pais_origen": 27,
+  "controles": {
+    "success_coincide_con_meta": true,
+    "funding_ihs_coincide_asinh": true,
+    "target_ihs_coincide_asinh": true,
+    "ln_poblacion_coincide": true,
+    "eu_share_coincide": true,
+    "same_share_coincide_con_denominador_positivo": true,
+    "adjacent_share_coincide_con_denominador_positivo": true,
+    "sin_faltantes_matriz_modelo": true,
+    "matriz_modelo_finita": true,
+    "matriz_con_intercepto_rango_completo": true
+  },
+  "filas_finales": 2272,
+  "columnas_finales": 223,
+  "columnas_derivadas": 23,
+  "columnas_matriz_modelo": 17,
+  "numero_predictores": 14,
+  "predictores": [
+    "Ln1p_Target",
+    "Duration_Calendar",
+    "Description",
+    "Rewards",
+    "Ln1p_Prev_Success",
+    "Ln1p_Backed",
+    "Links",
+    "Video_Header",
+    "Videos_Bool",
+    "Images_Bool",
+    "Category_Creative_Arts",
+    "Category_Design",
+    "Category_Literature_Journalism",
+    "Category_Food"
+  ],
+  "respuestas": {
+    "lineal": "Ln1p_Funding = ln(1 + Funding)",
+    "logistica": "Success (0/1)"
+  },
+  "fechas_observadas": {
+    "Start_Date": [
+      "2022-01-10",
+      "2024-02-16"
+    ],
+    "End_Date": [
+      "2022-03-07",
+      "2024-03-01"
+    ]
+  },
+  "success_conteos": {
+    "0": 417,
+    "1": 1855
+  },
+  "duration_discrepancias": 191,
+  "duration_original_menos_calculada": {
+    "0": 2081,
+    "-1": 186,
+    "-7": 4,
+    "-25": 1
+  },
+  "sin_patrocinadores_ue": 32,
+  "recaudacion_cero": 10,
+  "recaudacion_cero_con_patrocinadores": 10,
+  "faltantes_nuevos_documentados": {
+    "Same_Ctry_Share_Clean": 32,
+    "Adjacent_Ctry_Share_Clean": 32
+  },
+  "casos_suma_paises_menor_backers": 1976,
+  "casos_suma_paises_mayor_backers": 0,
+  "paises_con_observaciones": 25,
+  "filas_eliminadas": 0,
+  "imputaciones": 0,
+  "winsorizaciones": 0,
+  "estandarizacion": false,
+  "balanceo_clases": false,
+  "modelos_ajustados": false,
+  "archivo": "crowdfunding_eu_data.csv",
+  "sha256": "dec820cebcb75c008cc1558879ee3a55c670c0439d467659dca61ac14d4002dc",
+  "original_sin_modificaciones": true,
+  "entorno": {
+    "python": "3.11.3",
+    "pandas": "3.0.6",
+    "numpy": "2.4.6"
+  }
+}

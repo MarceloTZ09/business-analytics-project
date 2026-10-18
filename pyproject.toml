@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crowdfunding-eu"
+version = "0.1.0"
+description = "Limpieza y transformación reproducible de campañas Kickstarter de la UE"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.0,<3", "pandas>=2.2,<4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+limpiar-eu = "scripts.limpiar_datos:main"
+
+[tool.setuptools]
+packages = ["scripts", "modelos"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
