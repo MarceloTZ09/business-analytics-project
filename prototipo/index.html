@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evaluación de campañas · Crowdfunding</title>
+  <style>
+    *{box-sizing:border-box} body{margin:0;background:#f3f6f7;color:#21373c;font:16px/1.5 system-ui,sans-serif}
+    main{max-width:960px;margin:auto;padding:40px 20px} header{margin-bottom:24px}
+    .etiqueta{color:#08776d;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+    h1{font-size:clamp(26px,4vw,36px);line-height:1.2;margin:10px 0} p{margin:8px 0;color:#52656a}
+    .tarjeta{background:white;border:1px solid #dce5e7;border-radius:16px;padding:26px;margin-bottom:20px}
+    h2{font-size:19px;margin:0 0 20px}.campos{display:grid;grid-template-columns:1fr 1fr;gap:18px 24px}
+    label{display:block;font-size:14px;font-weight:600} input,select{width:100%;padding:11px;margin-top:6px;border:1px solid #b7c9ce;border-radius:7px;font:inherit;color:inherit;background:white}
+    input:focus,select:focus{outline:3px solid #bde8df;border-color:#08776d}
+    small{display:block;font-size:12px;color:#60777d;font-weight:400;margin-top:4px}
+    .checks{display:flex;flex-wrap:wrap;gap:18px;margin:24px 0}.checks label{display:flex;align-items:center;gap:8px}.checks input{width:18px;height:18px;margin:0}
+    button{background:#08776d;color:white;border:0;border-radius:8px;padding:13px 23px;font:600 16px system-ui;cursor:pointer}
+    button:disabled{opacity:.55;cursor:wait} .resultado{border-top:4px solid #08776d}.porcentaje{font-size:46px;font-weight:750;color:#08776d;margin:0}
+    .aviso{font-size:13px;background:#fff5dd;border:1px solid #ead8a9;border-radius:10px;padding:16px;color:#66512b}
+    .error{color:#a22626;font-weight:600} [hidden]{display:none!important}
+    @media(max-width:600px){.campos{grid-template-columns:1fr}.tarjeta{padding:20px}main{padding-top:24px}}
+  </style>
+</head>
+<body>
+<main>
+  <header><span class="etiqueta">Analítica de negocios · Prototipo académico</span>
+    <h1>Evalúa una campaña</h1>
+    <p>Ingresa sus características para consultar la predicción del modelo Random Forest.</p>
+  </header>
+  <form id="formulario" class="tarjeta">
+    <h2>Características de la campaña</h2>
+    <div class="campos">
+      <label>Categoría<select id="Category" required></select></label>
+      <label>Meta de financiamiento<input id="Target" type="number" min="1" step="0.01" value="2103.20" required><small>Misma moneda y escala que el dataset.</small></label>
+      <label>Duración (días)<input id="Duration" type="number" min="2" max="60" step="1" value="30" required></label>
+      <label>Longitud de descripción<input id="Description" type="number" min="0" step="1" value="16" required><small>Valor de Description según la definición del dataset.</small></label>
+      <label>Número de recompensas<input id="Rewards" type="number" min="1" step="1" value="6" required></label>
+      <label>Éxitos previos del creador<input id="Prev_Success" type="number" min="0" step="1" value="0" required></label>
+      <label>Campañas respaldadas por el creador<input id="Backed" type="number" min="0" step="1" value="1" required></label>
+      <label>Número de enlaces<input id="Links" type="number" min="0" step="1" value="1" required></label>
+    </div>
+    <div class="checks">
+      <label><input id="Video_Header" type="checkbox">Video de cabecera</label>
+      <label><input id="Videos_Bool" type="checkbox">Videos (Videos_Bool)</label>
+      <label><input id="Images_Bool" type="checkbox" checked>Imágenes</label>
+    </div>
+    <button id="evaluar" type="submit" disabled>Evaluar campaña</button>
+    <p id="error" class="error" role="alert"></p>
+  </form>
+  <section id="resultado" class="tarjeta resultado" aria-live="polite" hidden>
+    <h2>Resultado de la evaluación</h2>
+    <p>Probabilidad estimada de éxito</p><div id="probabilidad" class="porcentaje"></div>
+    <p id="clasificacion"></p><small id="umbral"></small>
+  </section>
+  <aside class="aviso"><strong>Una predicción no es una garantía.</strong> En prueba, el modelo detectó el 34,40 % de las campañas no exitosas. Este prototipo es académico; falta verificar la disponibilidad de los datos al lanzamiento y la calibración de las probabilidades.</aside>
+</main>
+<script>
+  const boton=document.getElementById('evaluar');
+  const error=document.getElementById('error');
+  const resultado=document.getElementById('resultado');
+  async function iniciar(){
+    try{
+      const respuesta=await fetch('/api/config');
+      if(!respuesta.ok)throw new Error('No se pudo conectar con el backend.');
+      const config=await respuesta.json();
+      const selector=document.getElementById('Category');
+      for(const categoria of config.categorias){const opcion=document.createElement('option');opcion.value=categoria;opcion.textContent=categoria;selector.appendChild(opcion);}
+      boton.disabled=false;
+    }catch(e){error.textContent='Abre la página desde el servidor Python, no haciendo doble clic en el HTML.';}
+  }
+  document.getElementById('formulario').addEventListener('input',()=>{resultado.hidden=true;error.textContent='';});
+  document.getElementById('formulario').addEventListener('submit',async(evento)=>{
+    evento.preventDefault();boton.disabled=true;error.textContent='';resultado.hidden=true;
+    try{
+      const datos={Category:document.getElementById('Category').value};
+      for(const campo of ['Target','Duration','Description','Rewards','Prev_Success','Backed','Links'])datos[campo]=Number(document.getElementById(campo).value);
+      for(const campo of ['Video_Header','Videos_Bool','Images_Bool'])datos[campo]=Number(document.getElementById(campo).checked);
+      const respuesta=await fetch('/api/predecir',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(datos)});
+      const salida=await respuesta.json();if(!respuesta.ok)throw new Error(salida.error||'Error al evaluar la campaña.');
+      document.getElementById('probabilidad').textContent=(salida.probabilidad_exito*100).toLocaleString('es-PE',{minimumFractionDigits:2,maximumFractionDigits:2})+' %';
+      document.getElementById('clasificacion').textContent='Clasificación: '+salida.clasificacion;
+      document.getElementById('umbral').textContent='Umbral: '+salida.umbral.toFixed(2)+'. No es una garantía de éxito.';
+      resultado.hidden=false;
+    }catch(e){error.textContent=e.message;}finally{boton.disabled=false;}
+  });
+  iniciar();
+</script>
+</body>
+</html>
